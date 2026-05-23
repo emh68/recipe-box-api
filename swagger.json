@@ -8,8 +8,7 @@
   "host": "recipe-box-api-uom5.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https",
-    "http"
+    "https"
   ],
   "paths": {
     "/recipes/": {

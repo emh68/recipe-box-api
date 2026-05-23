@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const recipesController = require('../controllers/recipesController');
 
+//Testing
+router.get('/test', (req, res) => {
+    res.send("The router is working!");
+});
+
 router.get('/', () => { /* #swagger.tags = ['Recipes'] */ }, recipesController.getAllRecipes);
 
 router.get('/:id', () => { /* #swagger.tags = ['Recipes'] */ }, recipesController.getSingleRecipe);

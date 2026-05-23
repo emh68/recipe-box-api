@@ -12,7 +12,6 @@ const getAllRecipes = async (req, res, next) => {
     }
 };
 
-
 const getSingleRecipe = async (req, res, next) => {
     try {
         const db = mongodb.getDb();
