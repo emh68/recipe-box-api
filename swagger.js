@@ -6,7 +6,7 @@ const doc = {
         description: 'Recipe Box API Documentation',
     },
     host: 'recipe-box-api-uom5.onrender.com',
-    schemes: ['https', 'http'],
+    schemes: ['https'],
     definitions: {
         Recipe: {
             recipeName: "Classic Homemade Lasagna",
