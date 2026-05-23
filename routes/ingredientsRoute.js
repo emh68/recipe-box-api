@@ -2,14 +2,19 @@ const express = require('express');
 const router = express.Router();
 const ingredientsController = require('../controllers/ingredientsController');
 
-router.get('/', () => { /* #swagger.tags = ['Ingredients'] */ }, ingredientsController.getAllIngredients);
+/* #swagger.tags = ['Ingredients'] */
+router.get('/', ingredientsController.getAllIngredients);
 
-router.get('/:id', () => { /* #swagger.tags = ['Ingredients'] */ }, ingredientsController.getSingleIngredient);
+/* #swagger.tags = ['Ingredients'] */
+router.get('/:id', ingredientsController.getSingleIngredient);
 
-router.post('/', () => { /* #swagger.tags = ['Ingredients'] */ }, ingredientsController.createIngredient);
+/* #swagger.tags = ['Ingredients'] */
+router.post('/', ingredientsController.createIngredient);
 
-router.put('/:id', () => { /* #swagger.tags = ['Ingredients'] */ }, ingredientsController.updateIngredient);
+/* #swagger.tags = ['Ingredients'] */
+router.put('/:id', ingredientsController.updateIngredient);
 
-router.delete('/:id', () => { /* #swagger.tags = ['Ingredients'] */ }, ingredientsController.deleteIngredient);
+/* #swagger.tags = ['Ingredients'] */
+router.delete('/:id', ingredientsController.deleteIngredient);
 
 module.exports = router;
