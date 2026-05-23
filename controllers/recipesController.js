@@ -4,12 +4,7 @@ const mongodb = require('../db/connect');
 
 const getAllRecipes = async (req, res, next) => {
     try {
-        const db = mongodb.getDb();
-        //testing
-        if (!db) {
-            console.log("Database not initialized!");
-            return res.status(500).send("Database connection not ready");
-        }
+        const db = mongodb.getDb().db('recipe-box');
         const recipes = await db.collection('recipes').find().toArray();
         res.json(recipes)
     } catch (error) {
