@@ -1,0 +1,527 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Recipe Box API",
+    "description": "Recipe Box API Documentation",
+    "version": "1.0.0"
+  },
+  "host": "recipe-box-api-uom5.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/recipes/": {
+      "get": {
+        "tags": [
+          "Recipes"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Recipes"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "recipeName": {
+                  "example": "any"
+                },
+                "imageUrl": {
+                  "example": "any"
+                },
+                "difficultyLevel": {
+                  "example": "any"
+                },
+                "cuisineType": {
+                  "example": "any"
+                },
+                "dietType": {
+                  "example": "any"
+                },
+                "allergens": {
+                  "example": "any"
+                },
+                "mealType": {
+                  "example": "any"
+                },
+                "prepTimeMinutes": {
+                  "example": "any"
+                },
+                "cookTimeMinutes": {
+                  "example": "any"
+                },
+                "totalTimeMinutes": {
+                  "example": "any"
+                },
+                "servings": {
+                  "example": "any"
+                },
+                "caloriesPerServing": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "ingredientList": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/recipes/{id}": {
+      "get": {
+        "tags": [
+          "Recipes"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Recipes"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "recipeName": {
+                  "example": "any"
+                },
+                "imageUrl": {
+                  "example": "any"
+                },
+                "difficultyLevel": {
+                  "example": "any"
+                },
+                "cuisineType": {
+                  "example": "any"
+                },
+                "dietType": {
+                  "example": "any"
+                },
+                "allergens": {
+                  "example": "any"
+                },
+                "mealType": {
+                  "example": "any"
+                },
+                "prepTimeMinutes": {
+                  "example": "any"
+                },
+                "cookTimeMinutes": {
+                  "example": "any"
+                },
+                "totalTimeMinutes": {
+                  "example": "any"
+                },
+                "servings": {
+                  "example": "any"
+                },
+                "caloriesPerServing": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "ingredientList": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Recipes"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/ingredients/": {
+      "get": {
+        "tags": [
+          "Ingredients"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Ingredients"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ingredientName": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "caloriesPerUnit": {
+                  "example": "any"
+                },
+                "servingUnit": {
+                  "example": "any"
+                },
+                "estimatedPrice": {
+                  "example": "any"
+                },
+                "allergens": {
+                  "example": "any"
+                },
+                "storageType": {
+                  "example": "any"
+                },
+                "proteinGrams": {
+                  "example": "any"
+                },
+                "fatGrams": {
+                  "example": "any"
+                },
+                "carbsGrams": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ingredients/{id}": {
+      "get": {
+        "tags": [
+          "Ingredients"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Ingredients"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ingredientName": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "caloriesPerUnit": {
+                  "example": "any"
+                },
+                "servingUnit": {
+                  "example": "any"
+                },
+                "estimatedPrice": {
+                  "example": "any"
+                },
+                "allergens": {
+                  "example": "any"
+                },
+                "storageType": {
+                  "example": "any"
+                },
+                "proteinGrams": {
+                  "example": "any"
+                },
+                "fatGrams": {
+                  "example": "any"
+                },
+                "carbsGrams": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Ingredients"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Recipe": {
+      "type": "object",
+      "properties": {
+        "recipeName": {
+          "type": "string",
+          "example": "Classic Homemade Lasagna"
+        },
+        "imageUrl": {
+          "type": "string",
+          "example": "https://example.com/images/lasagna.jpg"
+        },
+        "difficultyLevel": {
+          "type": "string",
+          "example": "Medium"
+        },
+        "cuisineType": {
+          "type": "string",
+          "example": "Italian"
+        },
+        "dietType": {
+          "type": "string",
+          "example": "Omnivore"
+        },
+        "allergens": {
+          "type": "array",
+          "example": [
+            "Gluten",
+            "Dairy"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "mealType": {
+          "type": "string",
+          "example": "Dinner"
+        },
+        "prepTimeMinutes": {
+          "type": "number",
+          "example": 30
+        },
+        "cookTimeMinutes": {
+          "type": "number",
+          "example": 60
+        },
+        "totalTimeMinutes": {
+          "type": "number",
+          "example": 90
+        },
+        "servings": {
+          "type": "number",
+          "example": 8
+        },
+        "caloriesPerServing": {
+          "type": "number",
+          "example": 450
+        },
+        "instructions": {
+          "type": "array",
+          "example": [
+            "Boil the lasagna noodles according to package instructions.",
+            "Brown the ground beef and add tomato sauce with herbs."
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "ingredientList": {
+          "type": "array",
+          "example": [
+            "12 lasagna noodles",
+            "1 lb ground beef"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Ingredient": {
+      "type": "object",
+      "properties": {
+        "ingredientName": {
+          "type": "string",
+          "example": "Whole Milk Ricotta Cheese"
+        },
+        "category": {
+          "type": "string",
+          "example": "Dairy & Eggs"
+        },
+        "caloriesPerUnit": {
+          "type": "number",
+          "example": 110
+        },
+        "servingUnit": {
+          "type": "string",
+          "example": "1/4 cup (62g)"
+        },
+        "estimatedPrice": {
+          "type": "number",
+          "example": 4.99
+        },
+        "allergens": {
+          "type": "array",
+          "example": [
+            "Dairy"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "storageType": {
+          "type": "string",
+          "example": "Refrigerator"
+        },
+        "proteinGrams": {
+          "type": "number",
+          "example": 7
+        },
+        "fatGrams": {
+          "type": "number",
+          "example": 8
+        },
+        "carbsGrams": {
+          "type": "number",
+          "example": 3
+        }
+      }
+    }
+  }
+}
