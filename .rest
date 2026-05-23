@@ -1,0 +1,260 @@
+////////////////////////
+// LOCAL HOST
+//////////////////////
+
+# ==========================================
+# RECIPES (Local)
+# ==========================================
+
+### CREATE A NEW RECIPE (Local)
+POST http://localhost:8080/recipes
+Content-Type: application/json
+
+{
+  "recipeName": "Classic Homemade Lasagna",
+  "imageUrl": "https://example.com/images/lasagna.jpg",
+  "difficultyLevel": "Medium",
+  "cuisineType": "Italian",
+  "dietType": "Omnivore",
+  "allergens": ["Gluten", "Dairy"],
+  "mealType": "Dinner",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 60,
+  "totalTimeMinutes": 90,
+  "servings": 8,
+  "caloriesPerServing": 450,
+  "instructions": [
+    "Boil the lasagna noodles according to package instructions.",
+    "Brown the ground beef and add tomato sauce with herbs.",
+    "Layer noodles, meat sauce, and ricotta cheese mix in a baking dish.",
+    "Bake at 375 degrees Fahrenheit for 45 minutes until bubbling."
+  ],
+  "ingredientList": [
+    "12 lasagna noodles",
+    "1 lb ground beef",
+    "2 cups marinara sauce",
+    "15 oz ricotta cheese",
+    "2 cups shredded mozzarella cheese"
+  ]
+}
+
+### READ ALL RECIPES (Local)
+GET http://localhost:8080/recipes
+
+### READ SINGLE RECIPE BY ID (Local)
+GET http://localhost:8080/recipes/6a1212ac32d3d7b1bda1bc56
+
+### UPDATE AN EXISTING RECIPE (Local)
+PUT http://localhost:8080/recipes/60d5ecb8b3921b2f4c8b4567
+Content-Type: application/json
+
+{
+  "recipeName": "Ultimate Homemade Lasagna (Enhanced)",
+  "imageUrl": "https://example.com/images/lasagna-new.jpg",
+  "difficultyLevel": "Medium",
+  "cuisineType": "Italian-American",
+  "dietType": "Omnivore",
+  "allergens": ["Gluten", "Dairy"],
+  "mealType": "Dinner",
+  "prepTimeMinutes": 35,
+  "cookTimeMinutes": 55,
+  "totalTimeMinutes": 90,
+  "servings": 6,
+  "caloriesPerServing": 520,
+  "instructions": [
+    "Boil noodles with salt and olive oil.",
+    "Brown ground beef with Italian sausage, garlic, and onions.",
+    "Layer noodles, meat mixture, ricotta cheese, and plenty of parmesan.",
+    "Bake covered for 40 minutes, then uncovered for 15 minutes to brown cheese."
+  ],
+  "ingredientList": [
+    "12 lasagna noodles",
+    "0.5 lb ground beef",
+    "0.5 lb sweet Italian sausage",
+    "3 cups customized meat sauce",
+    "16 oz whole milk ricotta",
+    "3 cups fresh shredded mozzarella"
+  ]
+}
+
+### DELETE A RECIPE (Local)
+DELETE http://localhost:8080/recipes/60d5ecb8b3921b2f4c8b4567
+
+
+# ==========================================
+# INGREDIENTS (Local)
+# ==========================================
+
+### CREATE A NEW INGREDIENT (Local)
+POST http://localhost:8080/ingredients
+Content-Type: application/json
+
+{
+  "ingredientName": "Whole Milk Ricotta Cheese",
+  "category": "Dairy & Eggs",
+  "caloriesPerUnit": 110,
+  "servingUnit": "1/4 cup (62g)",
+  "estimatedPrice": 4.99,
+  "allergens": ["Dairy"],
+  "storageType": "Refrigerator",
+  "proteinGrams": 7,
+  "fatGrams": 8,
+  "carbsGrams": 3
+}
+
+### READ ALL INGREDIENTS (Local)
+GET http://localhost:8080/ingredients
+
+### READ SINGLE INGREDIENT BY ID (Local)
+GET http://localhost:8080/ingredients/6a12109c32d3d7b1bda1bc55
+
+### UPDATE AN INGREDIENT (Local)
+PUT http://localhost:8080/ingredients/6a12109c32d3d7b1bda1bc55
+Content-Type: application/json
+
+{
+  "ingredientName": "Organic Whole Milk Ricotta Cheese",
+  "category": "Dairy & Eggs",
+  "caloriesPerUnit": 100,
+  "servingUnit": "1/4 cup (60g)",
+  "estimatedPrice": 5.49,
+  "allergens": ["Dairy"],
+  "storageType": "Refrigerator",
+  "proteinGrams": 6,
+  "fatGrams": 7,
+  "carbsGrams": 4
+}
+
+### DELETE AN INGREDIENT (Local)
+DELETE http://localhost:8080/ingredients/60d5f022b3921b2f4c8b8901
+
+
+///////////////////
+// PRODUCTION
+//////////////////
+
+# ==========================================
+# RECIPES (Production)
+# ==========================================
+
+### CREATE A NEW RECIPE (Production)
+POST https://recipe-box-api-uom5.onrender.com/recipes
+Content-Type: application/json
+
+{
+  "recipeName": "Classic Homemade Lasagna",
+  "imageUrl": "https://example.com/images/lasagna.jpg",
+  "difficultyLevel": "Medium",
+  "cuisineType": "Italian",
+  "dietType": "Omnivore",
+  "allergens": ["Gluten", "Dairy"],
+  "mealType": "Dinner",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 60,
+  "totalTimeMinutes": 90,
+  "servings": 8,
+  "caloriesPerServing": 450,
+  "instructions": [
+    "Boil the lasagna noodles according to package instructions.",
+    "Brown the ground beef and add tomato sauce with herbs.",
+    "Layer noodles, meat sauce, and ricotta cheese mix in a baking dish.",
+    "Bake at 375 degrees Fahrenheit for 45 minutes until bubbling."
+  ],
+  "ingredientList": [
+    "12 lasagna noodles",
+    "1 lb ground beef",
+    "2 cups marinara sauce",
+    "15 oz ricotta cheese",
+    "2 cups shredded mozzarella cheese"
+  ]
+}
+
+### READ ALL RECIPES (Production)
+GET https://recipe-box-api-uom5.onrender.com/recipes
+
+### READ SINGLE RECIPE BY ID (Production)
+GET https://recipe-box-api-uom5.onrender.com/recipes/60d5ecb8b3921b2f4c8b4567
+
+### UPDATE AN EXISTING RECIPE (Production)
+PUT https://recipe-box-api-uom5.onrender.com/recipes/60d5ecb8b3921b2f4c8b4567
+Content-Type: application/json
+
+{
+  "recipeName": "Ultimate Homemade Lasagna (Enhanced)",
+  "imageUrl": "https://example.com/images/lasagna-new.jpg",
+  "difficultyLevel": "Medium",
+  "cuisineType": "Italian-American",
+  "dietType": "Omnivore",
+  "allergens": ["Gluten", "Dairy"],
+  "mealType": "Dinner",
+  "prepTimeMinutes": 35,
+  "cookTimeMinutes": 55,
+  "totalTimeMinutes": 90,
+  "servings": 6,
+  "caloriesPerServing": 520,
+  "instructions": [
+    "Boil noodles with salt and olive oil.",
+    "Brown ground beef with Italian sausage, garlic, and onions.",
+    "Layer noodles, meat mixture, ricotta cheese, and plenty of parmesan.",
+    "Bake covered for 40 minutes, then uncovered for 15 minutes to brown cheese."
+  ],
+  "ingredientList": [
+    "12 lasagna noodles",
+    "0.5 lb ground beef",
+    "0.5 lb sweet Italian sausage",
+    "3 cups customized meat sauce",
+    "16 oz whole milk ricotta",
+    "3 cups fresh shredded mozzarella"
+  ]
+}
+
+### DELETE A RECIPE (Production)
+DELETE https://recipe-box-api-uom5.onrender.com/recipes/60d5ecb8b3921b2f4c8b4567
+
+
+# ==========================================
+# INGREDIENTS (Production)
+# ==========================================
+
+### CREATE A NEW INGREDIENT (Production)
+POST https://recipe-box-api-uom5.onrender.com/ingredients
+Content-Type: application/json
+
+{
+  "ingredientName": "Whole Milk Ricotta Cheese",
+  "category": "Dairy & Eggs",
+  "caloriesPerUnit": 110,
+  "servingUnit": "1/4 cup (62g)",
+  "estimatedPrice": 4.99,
+  "allergens": ["Dairy"],
+  "storageType": "Refrigerator",
+  "proteinGrams": 7,
+  "fatGrams": 8,
+  "carbsGrams": 3
+}
+
+### READ ALL INGREDIENTS (Production)
+GET https://recipe-box-api-uom5.onrender.com/ingredients
+
+### READ SINGLE INGREDIENT BY ID (Production)
+GET https://recipe-box-api-uom5.onrender.com/ingredients/60d5f022b3921b2f4c8b8901
+
+### UPDATE AN INGREDIENT (Production)
+PUT https://recipe-box-api-uom5.onrender.com/ingredients/60d5f022b3921b2f4c8b8901
+Content-Type: application/json
+
+{
+  "ingredientName": "Organic Whole Milk Ricotta Cheese",
+  "category": "Dairy & Eggs",
+  "caloriesPerUnit": 100,
+  "servingUnit": "1/4 cup (60g)",
+  "estimatedPrice": 5.49,
+  "allergens": ["Dairy"],
+  "storageType": "Refrigerator",
+  "proteinGrams": 6,
+  "fatGrams": 7,
+  "carbsGrams": 4
+}
+
+### DELETE AN INGREDIENT (Production)
+DELETE https://recipe-box-api-uom5.onrender.com/ingredients/60d5f022b3921b2f4c8b8901
