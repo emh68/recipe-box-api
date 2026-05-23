@@ -1,7 +1,8 @@
-const routes = require('express').Router();
+const express = require('express');
+const router = express.Router();
 
-routes.use('/', require('./swagger'));
-routes.use('/recipes', require('./recipesRoute'));
-routes.use('/ingredients', require('./ingredients'));
+router.use('/', require('./swagger'));
+router.use('/recipes', require('./recipesRoute'));
+router.use('/ingredients', require('./ingredientsRoute'));
 
-module.exports = routes;
+module.exports = router;

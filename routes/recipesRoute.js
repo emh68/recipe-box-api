@@ -1,9 +1,15 @@
 const express = require('express');
-const routes = require('express').Router();
+const router = express.Router();
+const recipesController = require('../controllers/recipes');
 
-// A simple test route
-routes.get('/', (req, res) => {
-    res.send('This is the recipes route');
-});
+router.get('/', recipesController.getAllRecipes);
 
-module.exports = routes;
+router.get('/:id', recipesController.getSingleRecipe);
+
+router.post('/', recipesController.createRecipe);
+
+router.put('/:id', recipesController.updateRecipe);
+
+router.delete('/:id', recipesController.deleteRecipe);
+
+module.exports = router;
