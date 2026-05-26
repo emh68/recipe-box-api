@@ -13,6 +13,9 @@
   "paths": {
     "/recipes/": {
       "get": {
+        "tags": [
+          "Recipes"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -21,6 +24,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Recipes"
+        ],
         "description": "",
         "parameters": [
           {
@@ -90,6 +96,9 @@
     },
     "/recipes/{id}": {
       "get": {
+        "tags": [
+          "Recipes"
+        ],
         "description": "",
         "parameters": [
           {
@@ -112,6 +121,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Recipes"
+        ],
         "description": "",
         "parameters": [
           {
@@ -185,6 +197,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Recipes"
+        ],
         "description": "",
         "parameters": [
           {
@@ -209,6 +224,9 @@
     },
     "/ingredients/": {
       "get": {
+        "tags": [
+          "Ingredients"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -217,6 +235,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Ingredients"
+        ],
         "description": "",
         "parameters": [
           {
@@ -274,6 +295,9 @@
     },
     "/ingredients/{id}": {
       "get": {
+        "tags": [
+          "Ingredients"
+        ],
         "description": "",
         "parameters": [
           {
@@ -296,6 +320,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Ingredients"
+        ],
         "description": "",
         "parameters": [
           {
@@ -357,6 +384,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Ingredients"
+        ],
         "description": "",
         "parameters": [
           {

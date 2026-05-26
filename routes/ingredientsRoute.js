@@ -3,19 +3,15 @@ const router = express.Router();
 const ingredientsController = require('../controllers/ingredientsController');
 const { validateIngredient, validateId } = require('../middleware/validate');
 
-/* #swagger.tags = ['Ingredients'] */
-router.get('/', ingredientsController.getAllIngredients);
 
-/* #swagger.tags = ['Ingredients'] */
-router.get('/:id', validateId, ingredientsController.getSingleIngredient);
+router.get('/', /* #swagger.tags = ['Ingredients'] */ ingredientsController.getAllIngredients);
 
-/* #swagger.tags = ['Ingredients'] */
-router.post('/', validateIngredient, ingredientsController.createIngredient);
+router.get('/:id', /* #swagger.tags = ['Ingredients'] */ validateId, ingredientsController.getSingleIngredient);
 
-/* #swagger.tags = ['Ingredients'] */
-router.put('/:id', validateId, validateIngredient, ingredientsController.updateIngredient);
+router.post('/', /* #swagger.tags = ['Ingredients'] */ validateIngredient, ingredientsController.createIngredient);
 
-/* #swagger.tags = ['Ingredients'] */
-router.delete('/:id', validateId, ingredientsController.deleteIngredient);
+router.put('/:id', /* #swagger.tags = ['Ingredients'] */ validateId, validateIngredient, ingredientsController.updateIngredient);
+
+router.delete('/:id', /* #swagger.tags = ['Ingredients'] */ validateId, ingredientsController.deleteIngredient);
 
 module.exports = router;

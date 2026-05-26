@@ -3,19 +3,15 @@ const router = express.Router();
 const recipesController = require('../controllers/recipesController');
 const { validateRecipe, validateId } = require('../middleware/validate');
 
-/* #swagger.tags = ['Recipes'] */
-router.get('/', recipesController.getAllRecipes);
 
-/* #swagger.tags = ['Recipes'] */
-router.get('/:id', validateId, recipesController.getSingleRecipe);
+router.get('/', /* #swagger.tags = ['Recipes'] */ recipesController.getAllRecipes);
 
-/* #swagger.tags = ['Recipes'] */
-router.post('/', validateRecipe, recipesController.createRecipe);
+router.get('/:id', /* #swagger.tags = ['Recipes'] */ validateId, recipesController.getSingleRecipe);
 
-/* #swagger.tags = ['Recipes'] */
-router.put('/:id', validateId, validateRecipe, recipesController.updateRecipe);
+router.post('/', /* #swagger.tags = ['Recipes'] */ validateRecipe, recipesController.createRecipe);
 
-/* #swagger.tags = ['Recipes'] */
-router.delete('/:id', validateId, recipesController.deleteRecipe);
+router.put('/:id', /* #swagger.tags = ['Recipes'] */ validateId, validateRecipe, recipesController.updateRecipe);
+
+router.delete('/:id', /* #swagger.tags = ['Recipes'] */ validateId, recipesController.deleteRecipe);
 
 module.exports = router;
