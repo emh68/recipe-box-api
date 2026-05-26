@@ -13,7 +13,7 @@ app.use((err, req, res, next) => {
     console.error("System error stack trace: ", err.stack);
 
     res.status(500).json({
-        message: "An internal server error or database error occurred.",
+        message: "An internal server error occurred.",
         error: err.message
     });
 });
