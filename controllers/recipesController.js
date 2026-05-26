@@ -47,10 +47,6 @@ const createRecipe = async (req, res, next) => {
             ingredientList
         } = req.body;
 
-        if (!recipeName || !servings || !instructions || !ingredientList) {
-            return res.status(400).json({ message: "Recipe name, servings, instructions, and ingredients are required." });
-        }
-
         const newRecipe = {
             recipeName,
             imageUrl: imageUrl || null,

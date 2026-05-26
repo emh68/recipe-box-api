@@ -9,6 +9,15 @@ app.use(express.json());
 app.use('/', require('./routes/index.js'));
 
 
+app.use((err, req, res, next) => {
+    console.error("System error stack trace: ", err.stack);
+
+    res.status(500).json({
+        message: "An internal server error or database error occurred.",
+        error: err.message
+    });
+});
+
 mongodb.initDb((err) => {
     if (err) {
         console.log(err);

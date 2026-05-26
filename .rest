@@ -42,7 +42,7 @@ Content-Type: application/json
 GET http://localhost:8080/recipes
 
 ### READ SINGLE RECIPE BY ID (Local)
-GET http://localhost:8080/recipes/6a1212ac32d3d7b1bda1bc56
+GET http://localhost:8080/recipes/6a160c905f0ed9ba159ef40b
 
 ### UPDATE AN EXISTING RECIPE (Local)
 PUT http://localhost:8080/recipes/60d5ecb8b3921b2f4c8b4567
@@ -78,7 +78,7 @@ Content-Type: application/json
 }
 
 ### DELETE A RECIPE (Local)
-DELETE http://localhost:8080/recipes/60d5ecb8b3921b2f4c8b4567
+DELETE http://localhost:8080/recipes/6a1212ac32d3d7b1bda1bc56
 
 
 # ==========================================
@@ -126,7 +126,7 @@ Content-Type: application/json
 }
 
 ### DELETE AN INGREDIENT (Local)
-DELETE http://localhost:8080/ingredients/60d5f022b3921b2f4c8b8901
+DELETE http://localhost:8080/ingredients/6a124a60cec9aff0e96759fe
 
 
 ///////////////////
@@ -173,10 +173,10 @@ Content-Type: application/json
 GET https://recipe-box-api-uom5.onrender.com/recipes
 
 ### READ SINGLE RECIPE BY ID (Production)
-GET https://recipe-box-api-uom5.onrender.com/recipes/60d5ecb8b3921b2f4c8b4567
+GET https://recipe-box-api-uom5.onrender.com/recipes/6a126c02849321d53836c809
 
 ### UPDATE AN EXISTING RECIPE (Production)
-PUT https://recipe-box-api-uom5.onrender.com/recipes/60d5ecb8b3921b2f4c8b4567
+PUT https://recipe-box-api-uom5.onrender.com/recipes/6a126c02849321d53836c809
 Content-Type: application/json
 
 {
@@ -190,7 +190,7 @@ Content-Type: application/json
   "prepTimeMinutes": 35,
   "cookTimeMinutes": 55,
   "totalTimeMinutes": 90,
-  "servings": 6,
+  "servings": 10,
   "caloriesPerServing": 520,
   "instructions": [
     "Boil noodles with salt and olive oil.",
@@ -209,7 +209,7 @@ Content-Type: application/json
 }
 
 ### DELETE A RECIPE (Production)
-DELETE https://recipe-box-api-uom5.onrender.com/recipes/60d5ecb8b3921b2f4c8b4567
+DELETE https://recipe-box-api-uom5.onrender.com/recipes/6a126c02849321d53836c809
 
 
 # ==========================================
@@ -257,4 +257,4 @@ Content-Type: application/json
 }
 
 ### DELETE AN INGREDIENT (Production)
-DELETE https://recipe-box-api-uom5.onrender.com/ingredients/60d5f022b3921b2f4c8b8901
+DELETE https://recipe-box-api-uom5.onrender.com/ingredients/6a12538c4cfa82d89ec23716

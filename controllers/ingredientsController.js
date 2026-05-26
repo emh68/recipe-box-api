@@ -42,10 +42,6 @@ const createIngredient = async (req, res, next) => {
             carbsGrams
         } = req.body;
 
-        if (!ingredientName || !category || !servingUnit) {
-            return res.status(400).json({ message: "Ingredient name, category, and serving unit are required." });
-        }
-
         const newIngredient = {
             ingredientName,
             category,

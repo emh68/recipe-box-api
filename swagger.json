@@ -13,9 +13,6 @@
   "paths": {
     "/recipes/": {
       "get": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "responses": {
           "200": {
@@ -24,9 +21,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
@@ -36,6 +30,15 @@
               "type": "object",
               "properties": {
                 "recipeName": {
+                  "example": "any"
+                },
+                "servings": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "ingredientList": {
                   "example": "any"
                 },
                 "imageUrl": {
@@ -65,16 +68,7 @@
                 "totalTimeMinutes": {
                   "example": "any"
                 },
-                "servings": {
-                  "example": "any"
-                },
                 "caloriesPerServing": {
-                  "example": "any"
-                },
-                "instructions": {
-                  "example": "any"
-                },
-                "ingredientList": {
                   "example": "any"
                 }
               }
@@ -96,9 +90,6 @@
     },
     "/recipes/{id}": {
       "get": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
@@ -112,15 +103,15 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
           }
         }
       },
       "put": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
@@ -136,6 +127,15 @@
               "type": "object",
               "properties": {
                 "recipeName": {
+                  "example": "any"
+                },
+                "servings": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "ingredientList": {
                   "example": "any"
                 },
                 "imageUrl": {
@@ -165,16 +165,7 @@
                 "totalTimeMinutes": {
                   "example": "any"
                 },
-                "servings": {
-                  "example": "any"
-                },
                 "caloriesPerServing": {
-                  "example": "any"
-                },
-                "instructions": {
-                  "example": "any"
-                },
-                "ingredientList": {
                   "example": "any"
                 }
               }
@@ -185,15 +176,15 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
           }
         }
       },
       "delete": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
@@ -207,6 +198,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
           }
@@ -215,9 +209,6 @@
     },
     "/ingredients/": {
       "get": {
-        "tags": [
-          "Ingredients"
-        ],
         "description": "",
         "responses": {
           "200": {
@@ -226,9 +217,6 @@
         }
       },
       "post": {
-        "tags": [
-          "Ingredients"
-        ],
         "description": "",
         "parameters": [
           {
@@ -243,10 +231,10 @@
                 "category": {
                   "example": "any"
                 },
-                "caloriesPerUnit": {
+                "servingUnit": {
                   "example": "any"
                 },
-                "servingUnit": {
+                "caloriesPerUnit": {
                   "example": "any"
                 },
                 "estimatedPrice": {
@@ -286,9 +274,6 @@
     },
     "/ingredients/{id}": {
       "get": {
-        "tags": [
-          "Ingredients"
-        ],
         "description": "",
         "parameters": [
           {
@@ -302,15 +287,15 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
           }
         }
       },
       "put": {
-        "tags": [
-          "Ingredients"
-        ],
         "description": "",
         "parameters": [
           {
@@ -331,10 +316,10 @@
                 "category": {
                   "example": "any"
                 },
-                "caloriesPerUnit": {
+                "servingUnit": {
                   "example": "any"
                 },
-                "servingUnit": {
+                "caloriesPerUnit": {
                   "example": "any"
                 },
                 "estimatedPrice": {
@@ -363,15 +348,15 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "404": {
             "description": "Not Found"
           }
         }
       },
       "delete": {
-        "tags": [
-          "Ingredients"
-        ],
         "description": "",
         "parameters": [
           {
@@ -384,6 +369,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "404": {
             "description": "Not Found"
