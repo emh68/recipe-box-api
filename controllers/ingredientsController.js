@@ -20,7 +20,7 @@ const getSingleIngredient = async (req, res, next) => {
             return res.status(404).json({ message: "Ingredient not found." });
         }
 
-        return res.json(ingredient)
+        return res.json(ingredient);
     } catch (error) {
         next(error);
     }
@@ -56,12 +56,7 @@ const createIngredient = async (req, res, next) => {
         };
 
         const result = await db.collection('ingredients').insertOne(newIngredient);
-
-        if (result.acknowledged) {
-            res.status(201).json({ insertedId: result.insertedId });
-        } else {
-            res.status(500).json({ message: "An error occurred while creating the ingredient entry." });
-        }
+        res.status(201).json({ insertedId: result.insertedId });
     } catch (error) {
         next(error);
     }
@@ -99,9 +94,9 @@ const updateIngredient = async (req, res, next) => {
         });
 
         if (ingredient.matchedCount === 0) {
-            return res.status(404).json({ message: "Ingredient not found. No update occurred." })
+            return res.status(404).json({ message: "Ingredient not found. No update occurred." });
         }
-        res.status(200).json({ message: "Ingredient successfully updated." })
+        res.status(200).json({ message: "Ingredient successfully updated." });
     } catch (error) {
         next(error);
     }
@@ -110,10 +105,10 @@ const updateIngredient = async (req, res, next) => {
 const deleteIngredient = async (req, res, next) => {
     try {
         const db = mongodb.getDb();
-        const ingredient = await db.collection('ingredients').deleteOne({ _id: new ObjectId(req.params.id) })
+        const ingredient = await db.collection('ingredients').deleteOne({ _id: new ObjectId(req.params.id) });
 
         if (ingredient.deletedCount === 0) {
-            return res.status(404).json({ message: "Ingredient not found. Nothing was deleted." })
+            return res.status(404).json({ message: "Ingredient not found. Nothing was deleted." });
         }
         return res.status(200).json({ message: "Ingredient successfully deleted." });
     } catch (error) {

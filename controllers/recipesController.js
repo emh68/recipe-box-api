@@ -4,9 +4,11 @@ const mongodb = require('../db/connect');
 
 const getAllRecipes = async (req, res, next) => {
     try {
+        // Testing 500 server error
+        // throw new Error("Intentional test error");
         const db = mongodb.getDb();
         const recipes = await db.collection('recipes').find().toArray();
-        res.json(recipes)
+        res.json(recipes);
     } catch (error) {
         next(error);
     }
@@ -21,7 +23,7 @@ const getSingleRecipe = async (req, res, next) => {
             return res.status(404).json({ message: "No Recipe found." });
         }
 
-        return res.json(recipe)
+        return res.json(recipe);
     } catch (error) {
         next(error);
     }
@@ -65,13 +67,7 @@ const createRecipe = async (req, res, next) => {
         };
 
         const result = await db.collection('recipes').insertOne(newRecipe);
-
-        if (result.acknowledged) {
-            res.status(201).json({ insertedId: result.insertedId });
-        }
-        else {
-            res.status(500).json({ message: "An error occurred while creating the new recipe." })
-        }
+        res.status(201).json({ insertedId: result.insertedId });
     } catch (error) {
         next(error);
     }
@@ -116,9 +112,9 @@ const updateRecipe = async (req, res, next) => {
             }
         });
         if (recipe.matchedCount === 0) {
-            return res.status(404).json({ message: "Recipe not found. No update occurred." })
+            return res.status(404).json({ message: "Recipe not found. No update occurred." });
         }
-        res.status(200).json({ message: "Recipe successfully updated." })
+        res.status(200).json({ message: "Recipe successfully updated." });
     } catch (error) {
         next(error);
     }

@@ -38,15 +38,6 @@
                 "recipeName": {
                   "example": "any"
                 },
-                "servings": {
-                  "example": "any"
-                },
-                "instructions": {
-                  "example": "any"
-                },
-                "ingredientList": {
-                  "example": "any"
-                },
                 "imageUrl": {
                   "example": "any"
                 },
@@ -74,7 +65,16 @@
                 "totalTimeMinutes": {
                   "example": "any"
                 },
+                "servings": {
+                  "example": "any"
+                },
                 "caloriesPerServing": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "ingredientList": {
                   "example": "any"
                 }
               }
@@ -87,9 +87,6 @@
           },
           "400": {
             "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
@@ -141,15 +138,6 @@
                 "recipeName": {
                   "example": "any"
                 },
-                "servings": {
-                  "example": "any"
-                },
-                "instructions": {
-                  "example": "any"
-                },
-                "ingredientList": {
-                  "example": "any"
-                },
                 "imageUrl": {
                   "example": "any"
                 },
@@ -177,7 +165,16 @@
                 "totalTimeMinutes": {
                   "example": "any"
                 },
+                "servings": {
+                  "example": "any"
+                },
                 "caloriesPerServing": {
+                  "example": "any"
+                },
+                "instructions": {
+                  "example": "any"
+                },
+                "ingredientList": {
                   "example": "any"
                 }
               }
@@ -252,10 +249,10 @@
                 "category": {
                   "example": "any"
                 },
-                "servingUnit": {
+                "caloriesPerUnit": {
                   "example": "any"
                 },
-                "caloriesPerUnit": {
+                "servingUnit": {
                   "example": "any"
                 },
                 "estimatedPrice": {
@@ -286,9 +283,6 @@
           },
           "400": {
             "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
@@ -343,10 +337,10 @@
                 "category": {
                   "example": "any"
                 },
-                "servingUnit": {
+                "caloriesPerUnit": {
                   "example": "any"
                 },
-                "caloriesPerUnit": {
+                "servingUnit": {
                   "example": "any"
                 },
                 "estimatedPrice": {
