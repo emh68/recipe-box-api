@@ -96,7 +96,7 @@ const updateIngredient = async (req, res, next) => {
         if (ingredient.matchedCount === 0) {
             return res.status(404).json({ message: "Ingredient not found. No update occurred." });
         }
-        res.status(200).json({ message: "Ingredient successfully updated." });
+        res.sendStatus(204);
     } catch (error) {
         next(error);
     }

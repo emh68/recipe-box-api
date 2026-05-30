@@ -173,7 +173,7 @@ Content-Type: application/json
 GET https://recipe-box-api-uom5.onrender.com/recipes
 
 ### READ SINGLE RECIPE BY ID (Production)
-GET https://recipe-box-api-uom5.onrender.com/recipes/6a126c02849321d53836c809
+GET https://recipe-box-api-uom5.onrender.com/recipes/6a1b197928032b85155ef31c
 
 ### UPDATE AN EXISTING RECIPE (Production)
 PUT https://recipe-box-api-uom5.onrender.com/recipes/6a126c02849321d53836c809
@@ -209,7 +209,7 @@ Content-Type: application/json
 }
 
 ### DELETE A RECIPE (Production)
-DELETE https://recipe-box-api-uom5.onrender.com/recipes/6a160c905f0ed9ba159ef40b
+DELETE https://recipe-box-api-uom5.onrender.com/recipes/6a1b197928032b85155ef31c
 
 
 # ==========================================

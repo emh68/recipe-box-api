@@ -114,7 +114,7 @@ const updateRecipe = async (req, res, next) => {
         if (recipe.matchedCount === 0) {
             return res.status(404).json({ message: "Recipe not found. No update occurred." });
         }
-        res.status(200).json({ message: "Recipe successfully updated." });
+        res.sendStatus(204);
     } catch (error) {
         next(error);
     }
