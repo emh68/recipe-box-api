@@ -173,7 +173,7 @@ Content-Type: application/json
 GET https://recipe-box-api-uom5.onrender.com/recipes
 
 ### READ SINGLE RECIPE BY ID (Production)
-GET https://recipe-box-api-uom5.onrender.com/recipes/6a1b197928032b85155ef31c
+GET https://recipe-box-api-uom5.onrender.com/recipes/6a1bb0342ed7a30156a289c2
 
 ### UPDATE AN EXISTING RECIPE (Production)
 PUT https://recipe-box-api-uom5.onrender.com/recipes/6a126c02849321d53836c809
