@@ -491,6 +491,9 @@
     },
     "/auth/google": {
       "get": {
+        "tags": [
+          "Authentication"
+        ],
         "description": "",
         "responses": {
           "default": {
@@ -501,6 +504,9 @@
     },
     "/auth/google/callback": {
       "get": {
+        "tags": [
+          "Authentication"
+        ],
         "description": "",
         "responses": {
           "200": {
@@ -511,6 +517,9 @@
     },
     "/auth/failure": {
       "get": {
+        "tags": [
+          "Authentication"
+        ],
         "description": "",
         "responses": {
           "401": {

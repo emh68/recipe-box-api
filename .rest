@@ -1,7 +1,7 @@
 ########################################
 # CONFIGURATION VARIABLES
 ########################################
-@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsaWphaG1oQGdtYWlsLmNvbSIsImlhdCI6MTc4MDgwMTc1MywiZXhwIjoxNzgwODA1MzUzfQ.RSDsCikNTzQao4EBe_6fGoE-LNmHOtwxlb2lRvtl8Fk
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVsaWphaG1oQGdtYWlsLmNvbSIsImlhdCI6MTc4MDgwNTY3OSwiZXhwIjoxNzgwODA5Mjc5fQ.EOEXcG7mm6LyvY91LjKa3diTTyOyFhktMrqlg278lWg
 @localBaseUrl = http://localhost:8080
 @prodBaseUrl = https://recipe-box-api-uom5.onrender.com
 
