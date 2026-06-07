@@ -42,6 +42,14 @@ const doc = {
             fatGrams: 8,
             carbsGrams: 3
         }
+    },
+    securityDefinitions: {
+        OAuth2HeaderKey: {
+            type: 'apiKey',
+            in: 'header',
+            name: 'Authorization',
+            description: "Type exactly: Bearer <YOUR_TOKEN_STRING>"
+        }
     }
 };
 
